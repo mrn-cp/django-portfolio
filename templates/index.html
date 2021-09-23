@@ -1,0 +1,140 @@
+<!-- extends from base.html-->
+{% extends 'base.html' %}
+
+
+{% block title %}
+Home
+{% endblock title %}
+{% block home %}
+active
+{% endblock home %}
+
+
+{% block body %}
+
+<!--  Home page  -->
+<div class="container-fluid px-0">
+    <div class="home1">
+        <div class="flex-container">
+            <div class="profile1">
+                <h2>MANAS RANJAN NAG</h2>
+                <p> Your friendly neighbourhood <span class="emphasis"> DEVELOPER ! </span> </p>
+                    <li><a href="https://www.linkedin.com/in/manas-rn-2a0301220/" target="_blank"> <img src="static/img/sm1.png"></a></li>
+                    <li><a href="https://github.com/mrn-cp" target="_blank"> <img src="static/img/sm2.png"></a></li>
+                    <li><a href="https://www.hackerrank.com/mrn_cp" target="_blank"> <img src="static/img/sm3.png"></a></li>
+                    <li><a href="https://leetcode.com/mrn_cp/" target="_blank"> <img src="static/img/sm4.png"></a></li>
+            </div>
+            <div class="profile2"></div>
+        </div> 
+        <!--Line Break-->
+        <div class="h-break"> 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,192L80,192C160,192,320,192,480,202.7C640,213,800,235,960,208C1120,181,1280,107,1360,69.3L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+                <div class="custom-shape-divider-top-1631808788">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z" class="shape-fill"></path>
+                    </svg>
+                </div>
+            </svg>
+        </div>
+        
+    </div>
+</div>
+
+<!--  About page  -->
+    <div class="about1">
+    <h2>ABOUT</h2>
+    <div class="about-box">
+    <div class="grid-container">
+        <div class="item1">
+        </div>
+        <div class="item2">
+            <svg height="400" width="400">
+                <line x1="0" y1="0" x2="0" y2="250" />
+            </svg> 
+        </div>
+        <div class="item3">
+            <p> Hi, I am Manas Ranjan Nag a aspiring Software Engineer. I aim to bring revolutionary changes that can helpful to reduce the problems that are facing by day to day activities of human world. </p>
+            <p>As a student, I am persuing Master's degree in Physics in 2021 from Acharya Nagarjuna University. I graduated from Berhampur University and Dr. B.R. Ambedkar University with degrees in (Physics,Mathematics) and Education respectively. </p>
+            <p>During my last academic career, I am heavily inspired by Computer Science due to it's vast applications and it's revolutionary contributions to the planet in last 4 decades. Now it is the time of Artificial Inteligence, which can be further helpful with unimaginable ways.
+                So, I can say, I am enthusiastic about Artificial Inteligence and Machine Learning.<br>
+            <p>Oftentimes I do programming and in spare time I wander through nature.</p>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!--  Skill page  -->
+<div class="skill1">
+    <h2>SKILLS</h2>
+    <h3>Programming</h3>
+    <div class="container">
+        <!--learing basic intermediate advance expert-->
+        <div class="bar python" data-skill="Python"></div>
+        <div class="bar algo" data-skill="Algorithm"></div>
+        <div class="bar ds" data-skill="DataStructure"></div>
+        <div class="bar ps" data-skill="ProblemSolving"></div>  
+        <div class="bar django" data-skill="django"></div>
+        <div class="bar git" data-skill="Git/GitHub"></div>
+        <div class="bar html" data-skill="HTML"></div>
+        <div class="bar css" data-skill="CSS"></div>
+        <div class="bar js" data-skill="JavaScript"></div>
+    </div>
+    <h3>Programming Environment</h3>
+    <li>Working on both <span class="emphasis">Linux </span> and <span class="emphasis">Windows</span> .</li>
+    <li>Development Environment: <span class="emphasis">VS Code</span> .</li>
+    <h3>Other</h3>
+    <li>Teaching</li>
+    <li>Singing</li>
+    <h3>Language known</h3>
+    <li>English, Odia, Hindi, Bengali</li>
+    </div>
+</div>
+
+<!--Contact Page-->
+<div class="contact1">
+    <h2>Contact</h2>
+    <div class="grid-container contact-box">
+        <div class="contact-gc1">
+            <h3>MANAS RANJAN NAG</h3>
+            <P>City:&nbspBhubaneswar</p><br>
+            <p>Phone:&nbsp9337864418</p>
+            <p>Email:&nbsp<a href="#">mr.manasranjannag@gmail.com</a></p>
+            <p>LinkedIn:&nbsp<a href="https://www.linkedin.com/in/manas-rn-2a0301220/" target="_blank">Click on Me</a></p>
+            <p>GitHub:&nbsp<a href="https://github.com/mrn-cp" target="_blank">Click on Me</a></p>
+            <p>Hackerrank:&nbsp<a href="https://www.hackerrank.com/mrn_cp" target="_blank">Click on Me</a></p>
+            <p>Leetcode:&nbsp<a href="https://leetcode.com/mrn_cp/" target="_blank">Click on Me</a></p>
+        </div>
+        <div class="contact-gc2">
+            <h3> Drop me a line</h3>
+        <div class="container " style="width:500px; height:auto;">
+            <form class="my-3" method="post" action="/contact">
+            {% csrf_token %}
+                <div class="form-group my-3">
+                    <label for="exampleFormControlInput1">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
+                </div>
+                <div class="form-group my-3">
+                    <label for="exampleFormControlInput1">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group my-3">
+                    <label for="exampleFormControlInput1">Phone</label>
+                    <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your Phone Number">
+                </div>
+                <div class="form-group my-3">
+                    <label for="desc">Message me!!!</label>
+                    <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid footer">
+    <p>Created by Manas</p>
+</div>
+
+{% endblock body %}
+

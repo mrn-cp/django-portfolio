@@ -1,0 +1,38 @@
+<!-- extends from base.html-->
+{% extends 'base.html' %}
+
+{% block title %}
+Skills
+{% endblock title %}
+{% block skills %}
+active
+{% endblock skills %}
+
+
+{% block body %}
+<div class="skill1">
+    <h2>SKILLS</h2>
+    <h3>Programming</h3>
+    <div class="container">
+        <!--learing basic intermediate advance expert-->
+        <div class="bar python" data-skill="Python"></div>
+        <div class="bar algo" data-skill="Algorithm"></div>
+        <div class="bar ds" data-skill="DataStructure"></div>
+        <div class="bar ps" data-skill="ProblemSolving"></div>  
+        <div class="bar django" data-skill="django"></div>
+        <div class="bar git" data-skill="Git/GitHub"></div>
+        <div class="bar html" data-skill="HTML"></div>
+        <div class="bar css" data-skill="CSS"></div>
+        <div class="bar js" data-skill="JavaScript"></div>
+    </div>
+    <h3>Programming Environment</h3>
+    <li>Working on both <span class="emphasis">Linux </span> and <span class="emphasis">Windows</span> .</li>
+    <li>Development Environment: <span class="emphasis">VS Code</span> .</li>
+    <h3>Other</h3>
+    <li>Teaching</li>
+    <li>Singing</li>
+    <h3>Language known</h3>
+    <li>English, Odia, Hindi, Bengali</li>
+</div>
+{% endblock body %}
+

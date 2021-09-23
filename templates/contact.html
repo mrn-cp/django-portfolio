@@ -1,0 +1,55 @@
+<!-- extends from base.html-->
+{% extends 'base.html' %}
+
+{% block title %}
+Contact
+{% endblock title %}
+{% block contact %}
+active
+{% endblock contact %}
+
+
+{% block body %}
+<div class="contact1">
+    <h2>Contact</h2>
+    <div class="grid-container contact-box">
+        <div class="contact-gc1">
+            <h3>MANAS RANJAN NAG</h3>
+            <P>City:&nbspBhubaneswar</p><br>
+            <p>Phone:&nbsp9337864418</p>
+            <p>Email:&nbsp<a href="#">mr.manasranjannag@gmail.com</a></p>
+            <p>LinkedIn:&nbsp<a href="https://www.linkedin.com/in/manas-rn-2a0301220/" target="_blank">Click on Me</a></p>
+            <p>GitHub:&nbsp<a href="https://github.com/mrn-cp" target="_blank">Click on Me</a></p>
+            <p>Hackerrank:&nbsp<a href="https://www.hackerrank.com/mrn_cp" target="_blank">Click on Me</a></p>
+            <p>Leetcode:&nbsp<a href="https://leetcode.com/mrn_cp/" target="_blank">Click on Me</a></p>
+        </div>
+        <div class="contact-gc2">
+            <h3> Drop me a line</h3>
+        <div class="container " style="width:500px; height:auto;">
+            <form class="my-3" method="post" action="/contact">
+            {% csrf_token %}
+                <div class="form-group my-3">
+                    <label for="exampleFormControlInput1">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
+                </div>
+                <div class="form-group my-3">
+                    <label for="exampleFormControlInput1">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group my-3">
+                    <label for="exampleFormControlInput1">Phone</label>
+                    <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your Phone Number">
+                </div>
+                <div class="form-group my-3">
+                    <label for="desc">Message me!!!</label>
+                    <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}
+

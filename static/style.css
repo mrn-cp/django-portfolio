@@ -1,0 +1,336 @@
+* {box-sizing:border-box}
+
+.home1 {
+    position: relative;
+    margin-bottom: 200px;
+}
+/*----------profile name and social media----------*/
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.home1 .profile1 {
+    align-items: center;
+    margin-top:100px;
+}
+.home1 h2 {
+    color: rgb(13, 131, 185);
+    font-size:50px;
+    /*margin-top: 150px;*/
+    /*margin-left: 100px;*/
+}
+
+.home1 p {
+    color:hsl(198, 12%, 43%);
+    font-size:25px;
+    /*margin-top: 10px;
+    margin-left: 100px;*/
+}
+.home1 .emphasis {
+    color:rgb(185, 13, 176);
+    font-style: italic;
+}
+
+/*---Social media---*/
+.home1 li {
+    list-style: none;
+    display: inline;
+    padding: 0px 5px;
+}
+
+.home1 a img {
+    background-color: rgb(246, 247, 248);
+    height: 55px;
+    width: 55px;
+    border-radius: 50%; 
+}
+
+/*---profile photo---*/
+.home1 .profile2{
+    margin-left: 100px;
+    margin-top: 50px;
+    height:450px;
+    width:450px;
+    background-image: url("img/mrn.jpg");
+    background-size: cover;
+    display: block;
+    border:1px solid gray;
+    border-radius: 10%;
+    align-items: center;
+}
+
+/*=====Line Break====*/
+/*---curve----*/
+.h-break {
+    position: absolute;
+    top: 300px;
+}
+/*----arrow----*/
+.custom-shape-divider-top-1631808788 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.custom-shape-divider-top-1631808788 svg {
+    position: relative;
+    display: block;
+    width: calc(120% + 1.3px);
+    height: 250px;
+}
+
+.custom-shape-divider-top-1631808788 .shape-fill {
+    fill: #0099FF;
+}
+
+/*************************** ABOUT PAGE ******************/
+.about1{
+    margin-top:40px;
+    margin-bottom:200px;
+}
+.about1 h2 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size:50px;
+    color: #0099FF;
+    text-decoration-line: underline;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.about-box{
+    position:relative;
+    margin:auto;
+    top: 50px;
+    height: 450px;
+    width: 1100px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.63);
+    background-color: rgba(17, 130, 167, 0.089);  
+}
+
+ 
+.item1 {
+    grid-area: photo;
+    margin-left:30px;
+    margin-top: 30px;
+    height: 300px;
+    width: 300px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.63);
+    background-image: url(img/hello.jpg);
+    background-size: cover;
+}
+.item2 {
+    grid-area: svg;
+    margin-top: 50px;
+    margin-left:20px;
+}
+.item2 svg {
+    stroke:rgb(0, 110, 255);
+    stroke-width:3px;
+}
+.item3 {
+    grid-area: text;
+    margin-top: 30px;
+    margin-left:30px;
+    text-indent: 50px;
+    text-align: justify;
+    color: rgb(8, 99, 105);
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 350px 10px 600px;
+    grid-template-rows: auto;
+    /*justify-content: space-around;*/
+    grid-gap: 20px;
+    padding: 20px;
+    grid-template-areas: 
+        "photo svg text"
+        "photo svg text"
+        "photo svg text";
+}
+
+/*************************** SKILL PAGE ******************/
+.skill1 {
+    margin-top:30px;
+    margin-bottom:30px;
+    /*margin-left: 10%;*/
+}
+.skill1 h2 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size:50px;
+    color: #0099FF;
+    text-decoration-line: underline;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom:60px;
+}
+.skill1 h3 {
+    margin-left: 10%;
+    margin-bottom: 30px;
+    color: #ff00c8;
+}
+.skill1 li {
+    margin-left: 15%;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.skill1 li .emphasis{
+    color: #f33c97;
+    font-weight: bold;
+}
+/*-----------------------*/
+.container{
+width: 50%;
+margin: 0 auto;
+margin-bottom: 30px;
+}
+@keyframes load{
+from {
+    width: 0%
+}
+}
+@-webkit-keyframes load{
+from {
+    width: 0%
+}
+}
+@-moz-keyframes load{
+from {
+    width: 0%
+}
+}
+@-o-keyframes load{
+from {
+    width: 0%
+}
+}
+
+.bar{
+background-color: #EEE;
+padding: 1px;
+border-radius: 20px;
+margin-bottom: 15px;
+font-size: 18px;
+font-weight:bold;
+color: #FFF;
+text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+.bar::before{
+content:  attr(data-skill);
+background-color: #070983;
+display: inline-block;
+padding: 5px 0 5px 10px;
+border-radius: inherit;
+animation: load 2s 0s;
+-webkit-animation: load 2s 0s;
+-moz-animation: load 2s 0s;
+-o-animation: load 2s 0s;
+}
+/*
+.bar.front::before{
+background-color: #ffcc33;
+}
+.bar.back::before{
+background-color: #a6cfe3;
+}
+*/
+.bar.python::before{
+width: calc(85% - 10px);
+}
+.bar.ds::before{
+width: calc(80% - 10px);
+}
+.bar.algo::before{
+width: calc(72% - 10px);
+}
+.bar.ps::before{
+width: calc(65% - 10px);
+}
+.bar.git::before{
+width: calc(40% - 10px);
+}
+.bar.html::before{
+    width: calc(75% - 10px);
+}
+.bar.css::before{
+    width: calc(68% - 10px);
+}
+.bar.js::before{
+    width: calc(52% - 10px);
+}
+.bar.django::before{
+    width: calc(58% - 10px);
+}
+
+/*************************** Contact Page *************************/
+.contact1{
+    margin-top:40px;
+    margin-bottom:150px;
+}
+.contact1 h2 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size:50px;
+    color: #0099FF;
+    text-decoration-line: underline;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.contact1 .contact-box{
+    position:relative;
+    margin:auto;
+    top: 50px;
+    height: auto;
+    width: 1200px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.63);
+    background-color: rgba(17, 130, 167, 0.089);  
+}
+
+.contact-gc1 {
+    grid-area: add;
+    margin-top:30px;
+    margin:auto;
+}
+.contact-gc2 {
+    grid-area: msg;
+    margin-top: 30px;
+}
+
+.contact-gc1 p {
+    font-size:20px;
+}
+
+.contact-gc2 h3 {
+    color: rgb(161, 12, 180);
+    text-align: center;
+}
+
+.contact1 .grid-container {
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: auto;
+    justify-content:space-evenly;
+    grid-gap: 0px 0px;
+    /*padding: 20px;*/
+    grid-template-areas: 
+        "add msg" ;
+}
+
+
+.footer {
+    background-color: rgb(221, 215, 215);
+    height: 120px;
+}
+.footer p {
+    padding: 30px;
+    text-align: center;
+    font-size:20px;
+}
